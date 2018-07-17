@@ -1,2 +1,2 @@
 # cursospring
-esto es una prueba
+mvnw spring-boot:run
