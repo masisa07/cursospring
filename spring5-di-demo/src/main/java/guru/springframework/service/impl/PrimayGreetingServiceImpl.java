@@ -1,17 +1,18 @@
 package guru.springframework.service.impl;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import guru.springframework.service.GreetingService;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+@Primary
 
-	public static final String HOLA = "Hola a todos!!! - Original"; 
-	
+public class PrimayGreetingServiceImpl implements GreetingService{
+
 	@Override
 	public String sayGreating() {
-		return HOLA;
+		return "Hola - PrimaryGreeting";
 	}
 
 }
