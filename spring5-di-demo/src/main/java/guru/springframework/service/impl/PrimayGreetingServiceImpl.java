@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import guru.springframework.service.GreetingService;
 
 @Service
-@Profile("en")
+@Profile({"en", "default"})
 @Primary 
 public class PrimayGreetingServiceImpl implements GreetingService{
 
