@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import guru.springframework.service.impl.GreetingServiceImpl;
+import guru.service.impl.GreetingServiceImpl;
 
 public class ConstructorInjectedControllerTest {
 	private ConstructorInjectedController constructorInjectedController;

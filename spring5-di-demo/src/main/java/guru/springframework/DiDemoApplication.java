@@ -3,6 +3,7 @@ package guru.springframework;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import guru.springframework.controllers.ConstructorInjectedController;
 import guru.springframework.controllers.GetterInjectedController;
@@ -10,6 +11,7 @@ import guru.springframework.controllers.MyController;
 import guru.springframework.controllers.PropertyInjectedController;
 
 @SpringBootApplication
+@ComponentScan(basePackages= {"guru.service", "guru.springframework"})
 public class DiDemoApplication {
 
 	private static final String MYCONTROLLER = "myController";

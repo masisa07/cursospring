@@ -2,7 +2,7 @@ package guru.springframework.controllers;
 
 import org.springframework.stereotype.Controller;
 
-import guru.springframework.service.GreetingService;
+import guru.service.impl.GreetingService;
 
 @Controller
 public class MyController {

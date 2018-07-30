@@ -1,8 +1,6 @@
-package guru.springframework.service.impl;
+package guru.service.impl;
 
 import org.springframework.stereotype.Service;
-
-import guru.springframework.service.GreetingService;
 
 @Service
 public class GreetingServiceImpl implements GreetingService {
