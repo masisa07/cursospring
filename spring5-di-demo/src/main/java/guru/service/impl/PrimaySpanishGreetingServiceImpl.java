@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 
 import guru.springframework.repository.GreetingRepository;
 
-@Service
-@Profile("es")
-@Primary
+//@Service
+//@Profile("es")
+//@Primary
 public class PrimaySpanishGreetingServiceImpl implements GreetingService {
 
 	private GreetingRepository greetingRepository;
