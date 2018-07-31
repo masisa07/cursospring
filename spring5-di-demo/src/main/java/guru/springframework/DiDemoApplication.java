@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 import guru.springframework.bean.FakeDataSource;
+import guru.springframework.bean.MssFakeDataSource;
 
 @SpringBootApplication
 @ComponentScan(basePackages= {"guru.service", "guru.springframework"})
@@ -28,5 +29,10 @@ public class DiDemoApplication {
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 		
 		System.out.println("-----------------> "+fakeDataSource.getUser());
+		
+		MssFakeDataSource mssFakeDataSource = (MssFakeDataSource) ctx.getBean(MssFakeDataSource.class);
+		
+		System.out.println("-----------------> "+mssFakeDataSource.getPassword());
+		
 	}
 }
