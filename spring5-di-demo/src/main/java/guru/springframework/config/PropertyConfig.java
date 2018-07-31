@@ -16,15 +16,15 @@ import guru.springframework.bean.MssFakeDataSource;
 @Configuration
 //@PropertySource({"classpath:datasource.properties", "classpath:mss.properties"})
 
-@PropertySources({
-	@PropertySource("classpath:datasource.properties"), 
-	@PropertySource("classpath:mss.properties")
-})
+//@PropertySources({
+//	@PropertySource("classpath:datasource.properties"), 
+//	@PropertySource("classpath:mss.properties")
+//})
 
 
 public class PropertyConfig {
 
-	private static String VAR = "JAVA_HOME";
+//	private static String VAR = "JAVA_HOME";
 	
 	@Value("${guru.username}")
 	private String user;
@@ -45,13 +45,14 @@ public class PropertyConfig {
 	@Value("${guru.mss.dburl}")
 	private String mssUrl;
 
-	@Autowired
-	private Environment env;
+//	@Autowired
+//	private Environment env;
 
 	@Bean
 	public FakeDataSource fakeDataSource() {
 		FakeDataSource fakeDataSource = new FakeDataSource();
-		fakeDataSource.setUser(env.getProperty(VAR));
+//		fakeDataSource.setUser(env.getProperty(VAR));
+		fakeDataSource.setUser(user);
 		fakeDataSource.setPassword(password);
 		fakeDataSource.setUrl(url);
 		return fakeDataSource;
