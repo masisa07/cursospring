@@ -6,10 +6,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 import guru.springframework.bean.FakeDataSource;
-import guru.springframework.controllers.ConstructorInjectedController;
-import guru.springframework.controllers.GetterInjectedController;
-import guru.springframework.controllers.MyController;
-import guru.springframework.controllers.PropertyInjectedController;
 
 @SpringBootApplication
 @ComponentScan(basePackages= {"guru.service", "guru.springframework"})
@@ -19,7 +15,7 @@ public class DiDemoApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
-		MyController controller = (MyController) ctx.getBean(MYCONTROLLER);
+//		MyController controller = (MyController) ctx.getBean(MYCONTROLLER);
 		
 //		controller.hello();
 //		
@@ -31,6 +27,6 @@ public class DiDemoApplication {
 		
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
 		
-		System.out.println(fakeDataSource.getUser());
+		System.out.println("-----------------> "+fakeDataSource.getUser());
 	}
 }
