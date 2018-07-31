@@ -61,9 +61,9 @@ public class PropertyConfig {
 	@Bean
 	public MssFakeDataSource mssFakeDataSource() {
 		MssFakeDataSource mssfakeDataSource = new MssFakeDataSource();
-		mssfakeDataSource.setUser(user);
-		mssfakeDataSource.setPassword(password);
-		mssfakeDataSource.setUrl(url);
+		mssfakeDataSource.setUser(mssUser);
+		mssfakeDataSource.setPassword(mssPassword);
+		mssfakeDataSource.setUrl(mssUrl);
 		return mssfakeDataSource;
 	}
 

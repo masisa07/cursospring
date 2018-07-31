@@ -1,0 +1,36 @@
+# esto es un comentario
+
+name: Manuel
+
+names:
+  - Manuel
+  - Mj
+  - Paul
+  
+pount_sign: "#"
+
+book:
+  author: Manuel Sierra
+  publisher: publicacion
+  
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no #No, false, FALSE
+
+string_val: "esto es una cola"
+
+colon_string: "mi curso: uno dos tres"
+
+include_new_lines: |
+  adfafd adfa adfa
+  qerq qerqer qewrqer
+  vzvz zvzcxv zvcxzv
+  
+ignore_line: >
+  this is
+  just one long
+  string  
