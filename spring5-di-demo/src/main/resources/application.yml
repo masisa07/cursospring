@@ -3,3 +3,10 @@ guru:
     username: yalmanuel
     password: yalmsspwd
     dburl: yaldburl.url
+---
+spring:
+  profile: de
+
+guru:
+  mss:
+    password: de__yalmanuel
