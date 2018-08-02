@@ -1,10 +1,13 @@
 package guru.springframework.spring5recipeapp.domain;
 
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Lob;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import org.springframework.data.annotation.Id;
@@ -28,6 +31,8 @@ public class Recipe {
 	@Lob
 	private Byte[] image;
 	
+	@OneToMany (cascade=CascadeType.ALL, mappedBy = "recipe")
+	private Set<Ingredient> ingredients;
 	@OneToOne (cascade = CascadeType.ALL)
 	private Notes note;
 	
