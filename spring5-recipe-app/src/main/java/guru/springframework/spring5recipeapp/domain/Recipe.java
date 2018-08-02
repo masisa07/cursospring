@@ -4,6 +4,8 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Lob;
@@ -27,7 +29,8 @@ public class Recipe {
 	private Integer servings;
 	private String url;
 	private String directions;
-	//TODO: private Difficulty difficulty;
+	@Enumerated(value=EnumType.STRING)
+	private Difficulty difficulty;
 	@Lob
 	private Byte[] image;
 	
