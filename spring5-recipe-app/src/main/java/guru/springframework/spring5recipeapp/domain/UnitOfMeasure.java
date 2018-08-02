@@ -6,19 +6,27 @@ import javax.persistence.GenerationType;
 
 import org.springframework.data.annotation.Id;
 
-import lombok.Data;
-
 @Entity
-@Data
-public class UnionOfMeasure {
-
+public class UnitOfMeasure {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
 	private String description;
 
-//	@OneToOne (cascade=CascadeType.ALL)
-//	private Ingredient ingredient;
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 }

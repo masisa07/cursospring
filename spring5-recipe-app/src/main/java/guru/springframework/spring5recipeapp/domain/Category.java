@@ -1,6 +1,5 @@
 package guru.springframework.spring5recipeapp.domain;
 
-import java.math.BigDecimal;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -10,19 +9,38 @@ import javax.persistence.ManyToMany;
 
 import org.springframework.data.annotation.Id;
 
-import lombok.Data;
-
 @Entity
-@Data
 public class Category {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String description;
 
-	private String description;
-	private BigDecimal amount;
+    @ManyToMany(mappedBy = "categories")
+    private Set<Recipe> recipes;
 
-	@ManyToMany(mappedBy = "categories")
-	private Set<Recipe> recipes;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Set<Recipe> getRecipes() {
+        return recipes;
+    }
+
+    public void setRecipes(Set<Recipe> recipes) {
+        this.recipes = recipes;
+    }
 }
