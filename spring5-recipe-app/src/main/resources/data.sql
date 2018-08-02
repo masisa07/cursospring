@@ -1,0 +1,9 @@
+Insert into category (description) values ('Americana');
+Insert into category (description) values ('Mejicana');
+Insert into category (description) values ('Tailandesa');
+Insert into category (description) values ('Italiana');
+Insert into category (description) values ('Espaniola');
+Insert into unit_of_measure (description) values ('kilo');
+Insert into unit_of_measure (description) values ('pizca');
+Insert into unit_of_measure (description) values ('litro');
+Insert into unit_of_measure (description) values ('cucharada');
